@@ -1,0 +1,131 @@
+﻿@{
+    ViewBag.Title = "Inbox";
+}
+
+<div style="height:50px;">&nbsp;</div>
+<table class="table table-bordered" style="width:95%;margin:auto;">
+    <thead>
+        <tr>
+            <th>From</th>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><div><a href="~/account/myprofile?id=1"><img src="~/profilepics/profilepic_bill_gates.jpg" style="height:35px;" /></a></div>
+                <div>Bill Gates</div>
+                <div>Redmond, Wa</div>
+            </td>
+            <td>Can I get more info?</td>
+            <td>Saturday, May 10th 2015 9:00pm CST</td>
+            <td style="vertical-align:bottom;">
+                <div><a href="#reply1" data-toggle="modal">Reply</a></div>
+                <div><a href="#">Delete</a></div>
+                <div><a href="#">Archive</a></div>
+                <div><a href="#msg1" data-toggle="collapse">View/Hide Msg</a></div>
+            </td>
+        </tr>
+        <tr id="msg1" class="collapse">
+            <td colspan="4">
+                Hi Kathy,<br />
+                <br />
+                Can I get more info about your experience?<br />
+                <br />
+                Thanks,<br />
+                <br />
+                - Bill
+            </td>
+        </tr>
+        <tr><td colspan="4" style="background-color:#ccc;">&nbsp;</td></tr>
+        <tr>
+            <td><div><a href="~/account/myprofile?id=1"><img src="~/profilepics/profilepic_brandy_trike.jpg" style="height:35px;" /></a></div>
+                <div>Brandy Trike</div>
+                <div>Redmond, Wa</div>
+            </td>
+            <td>How old are you?</td>
+            <td>Saturday, May 10th 2015 9:00pm CST</td>
+            <td style="vertical-align:bottom;">
+                <div><a href="#reply2" data-toggle="modal">Reply</a></div>
+                <div><a href="#">Delete</a></div>
+                <div><a href="#">Archive</a></div>
+                <div><a href="#msg2" data-toggle="collapse">View/Hide Msg</a></div>
+            </td>
+        </tr>
+        <tr id="msg2" class="collapse">
+            <td colspan="4">
+                Hi Kathy,<br />
+                <br />
+                How old are you?<br />
+                <br />
+                Thanks,<br />
+                <br />
+                - Brandy
+            </td>
+        </tr>
+        <tr><td colspan="4" style="background-color:#ccc;">&nbsp;</td></tr>
+        <tr>
+            <td><div><a href="~/account/myprofile?id=1"><img src="~/profilepics/profilepic_bill_gates.jpg" style="height:35px;" /></a></div>
+                <div>Bill Gates</div>
+                <div>Redmond, Wa</div>
+            </td>
+            <td>Payment Request</td>
+            <td>Saturday, May 10th 2015 9:00pm CST</td>
+            <td style="vertical-align:bottom;">
+                <div><a href="#reply3" data-toggle="modal">Reply</a></div>
+                <div><a href="#">Delete</a></div>
+                <div><a href="#">Archive</a></div>
+                <div><a href="#msg3" data-toggle="collapse">View/Hide Msg</a></div>
+            </td>
+        </tr>
+        <tr id="msg3" class="collapse">
+            <td colspan="4">
+                Hi Kathy,<br />
+                <br />
+                Bill Gates has requested payment for the following service.<br />
+                <a href="~/payments/makepayment">Service Request #2309</a><br />
+                <br />
+                - The Dog Sitter Team
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="reply1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    RE: Can I get more info?
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div>Reply</div>
+                <div><textarea class="form-control" rows="10"></textarea></div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-default" data-dismiss="modal">Send</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="reply2" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    RE: How old are you?
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div>Reply</div>
+                <div><textarea class="form-control" rows="10"></textarea></div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-default" data-dismiss="modal">Send</a>
+            </div>
+        </div>
+    </div>
+</div>

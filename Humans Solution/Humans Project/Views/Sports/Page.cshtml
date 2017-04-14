@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Page Selection";
+    
+    int sportid = Request.QueryString["sportid"] != null ? int.Parse(Request.QueryString["sportid"].ToString()) : 0;
+}
+
+<br /><br />
+<div class="center-block" style="width:400px;">
+    <table class="center-block" style="width:400px;">
+        <tr>
+            <td style="text-align:center;width:170px;font-size:20px;">
+                <a href="~/venues/manage?sportid=@sportid">
+                    <span class="glyphicon glyphicon-map-marker btn-lg"></span><br />
+                    spots
+                </a>
+            </td>
+            <th style="width:60px;text-align:center;">OR</th>
+            <td style="text-align:center;width:170px;font-size:20px;">
+                <a href="~/humans/manage?sportid=@sportid">
+                    <span class="glyphicon glyphicon-user btn-lg"></span><br />
+                    humans
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

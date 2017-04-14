@@ -1,0 +1,100 @@
+﻿@using Humans.Web
+@model UserSport
+@{
+    ViewBag.Title = "Find Humans";
+    UserProfile acctCurrent = (UserProfile)Session["User"];
+}
+
+@section scripts{
+    <script type="text/javascript" src="~/scripts/humans.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+}
+
+<div class="headforsport lightorangeback dimcolor" style="font-size:22px;padding:5px;position:relative;">
+    @Model.Sport.Longname
+    <div class="whitetext" style="padding:10px 0px 0px 20px;font-size:16px;width:100%;position:absolute;top:0px;left:0px;">
+        <div class="dropdown pull-right" style="padding-right:20px;">
+            <a href="#" class="dropdown-toggle whitetext" data-toggle="dropdown">change sport <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                @foreach(UserSport usersport in acctCurrent.UserSports)
+                {
+                    <li><a href="~/humans/manage?sportid=@usersport.SportId">@usersport.Sport.Longname</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="text-center greytext">
+    <a data-target="youBox" class="headoption btn greytext">you.</a> | <a data-target="rememberBox" class="headoption btn greytext">remembered.</a> | <a data-target="findBox" class="headoption btn orangetext">find.</a>
+</div>
+
+<div id="youBox" class="mode center-block" style="width:80%;display:none;">
+    <b class="orangetext" style="font-size:30px;">findable</b><span class="orangetext"> to new humans</span>
+    <span data-value="@if(Model.Findable){<text>true</text>}else{<text>false</text>}" id="spanFindable" class="greytext pull-right btn" style="font-size:20px;">
+        @if(Model.Findable){<text>YEP.</text>}else{<text>NO.</text>}
+    </span>
+    <br />
+    <br />
+    <b class="orangetext" style="font-size:30px;">note</b>
+    <textarea id="txtNote" style="width:100%;height:300px;">@Model.Note</textarea>
+    <br />
+    <br />
+    <div class="greytext text-center" style="font-size:20px;">
+          <span data-skilllevel="1" class="btn @if(@Model.SkillLevel == 1){<text>skillselected</text>}else{<text>skilllisted</text>}">fresh</span> 
+        | <span data-skilllevel="2" class="btn @if(@Model.SkillLevel == 2){<text>skillselected</text>}else{<text>skilllisted</text>}">intermediate</span> 
+        | <span data-skilllevel="3" class="btn @if(@Model.SkillLevel == 3){<text>skillselected</text>}else{<text>skilllisted</text>}">advanced</span> 
+        | <span data-skilllevel="4" class="btn @if(@Model.SkillLevel == 4){<text>skillselected</text>}else{<text>skilllisted</text>}">expert</span>
+    </div>
+
+    <div data-id="@Request.QueryString["id"]" data-sportid="@Request.QueryString["sportid"]" class="save text-center">
+        <b class="btn button1">save.</b>
+        <img src="~/images/loading_animated.gif" style="height:30px;display:none;" />
+        <span class="ok glyphicon glyphicon-ok-sign" style="display:none;"></span>
+        <span class="err glyphicon glyphicon-exclamation-sign" style="display:none;"></span>
+    </div>
+</div>
+
+<div id="filterLinks" class="text-right" style="display:none;height:30px;">
+    <span id="spanFilter" class="btn glyphicon glyphicon-filter greytext" style="font-size:20px;"></span>
+    <span class="pull-left greytext"><span id="showmap" class="btn greytext" style="font-size:16px;">map</span>|<span id="showlist" class="btn greytext" style="font-size:16px;">list</span></span>
+</div>
+
+<div id="rememberBox" class="mode" style="display:none;">
+    <div class="row-fluid">
+        <div class="col-sm-12">
+            <div id="remMapResults" style="width:100%;height:500px;display:none;"></div>
+            <div id="remResults"></div>
+        </div>
+    </div>
+</div>
+
+<div id="findBox" class="mode">
+    <div class="row-fluid">
+        <div class="col-sm-9">
+            <div id="findMapResults" style="width:100%;height:500px;display:none;"></div>
+            <div id="findResults"></div>
+        </div>
+        <div id="filterBox" class="col-sm-3 text-center" style="padding:10px;">
+            <div style="border-left:solid 1px #cbcbcb;width:100%;height:300px;padding:10px;">
+                <div class="greyback" style="padding:15px;margin-top:10px;text-align:left;">
+                    distance<span id="distanceDisplay" class="pull-right"></span>
+                    <div id="sliderDist"></div>
+                </div>
+                <div style="padding:15px;margin-top:10px;text-align:left;">
+                    age<span id="ageDisplay" class="pull-right"></span>
+                    <div id="sliderAge"></div>
+                </div>
+                <div class="greyback" style="padding:15px;margin-top:10px;">
+                    <input type="radio" name="gender" value="M" checked="checked" />men
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" value="F" />women
+                </div>
+                <div style="padding:15px;margin-top:10px;text-align:left;">
+                    skill level<span id="skillDisplay" class="pull-right"></span>
+                    <div id="sliderSkill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

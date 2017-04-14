@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Make A Payment";
+}
+
+<div style="height:50px;">&nbsp;</div>
+<table class="table table-bordered" style="width:95%;margin:auto;">
+    <thead>
+        <tr>
+            <th>From</th>
+            <th>Pending Services</th>
+            <th>Amount</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><div><a href="~/account/myprofile?id=1"><img src="~/profilepics/profilepic_bill_gates.jpg" style="height:35px;" /></a></div>
+                <div>Bill Gates</div>
+                <div>Redmond, Wa</div>
+            </td>
+            <td><a href="~/requests/completed">Service Request #2309</a></td>
+            <td>$60.00</td>
+            <td style="vertical-align:top;">
+                <div><a href="#request" data-toggle="modal">Make A Payment</a></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="request" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Make A Payment</h3>
+            </div>
+            <br />
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$60.00</div>
+            <div class="modal-body">
+                <div>Comment</div>
+                <div><textarea class="form-control"></textarea></div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-default" data-dismiss="modal">Send</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+﻿@using Humans.Web
+@using Humans.Web.Helpers
+@model Venue
+@{
+    ViewBag.Title = "";
+    
+    UserProfile acctCurrent = (UserProfile)Session["User"];
+    int currUserId = acctCurrent.UserId;
+    
+    int userDistance = (int)Math.Round(GeoCodeCalc.CalcDistance(acctCurrent.Lat, acctCurrent.Lng, Model.Lat, Model.Lng), 0) + 1;
+    
+    //string secLine = string.IsNullOrEmpty(Model.UserProfile.Title) ? string.Format("{0} {1} < {2} mi.", (DateTime.Today.Subtract(Model.UserProfile.Birthdate).Days/365).ToString(), (Model.UserProfile.Gender == "M" ? "Male" : "Female"), userDistance) : string.Format("at {0} {1}mi.", Model.UserProfile.Company, 0);
+}
+
+@section scripts{
+    <script type="text/javascript" src="~/scripts/viewprofile.js"></script>
+}
+
+<!-- Header container -->
+<div class="container-fluid" style="position:relative;padding:0px;margin:0px;">
+    
+    <!-- Header background pic -->
+    <div class="row-fluid bgProfile" style="opacity:.5;
+                                            width:100%;
+                                            height:230px;
+                                            background-image:url(../logos/@Model.Logo);
+                                            background-position:50% 50%;
+                                            background-size:100% 300%;
+                                            background-repeat:no-repeat;">
+    </div>
+
+    <!-- Header background tint -->
+    <div class="orangeoverlay" style="position:absolute;top:0px;left:0px;width:100%;height:230px;">&nbsp;</div>
+    
+    <!-- Container for Info -->
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:230px;">
+        
+        <!-- Background for remember link -->
+        <div class="center-block" style="width:200px;position:relative;z-index:98;">
+
+            <!-- Remember link -->
+            @if(Model.UserVenues.Any(r => r.UserId == currUserId)){
+                <span data-id="@Model.Id" class="orangeback whitetext" style="padding:2px 10px 2px 10px;position:absolute;top:50px;left:150px;font-size:18px;width:170px;text-align:right;z-index:98;">
+                    remembered
+                </span>
+            }
+            else{
+                <span data-id="@Model.Id" data-location="viewvenue" class="remembervenue btn orangeback whitetext" style="padding:2px 10px 2px 10px;position:absolute;top:50px;left:150px;font-size:18px;width:170px;text-align:right;z-index:98;">
+                    + remember
+                    <img class="center-block" src="../images/loading2.gif" style="height:20px;display:none;" />
+                </span>
+            }
+        </div>
+
+        <!-- Circle profile pic -->
+        <img src="~/logos/@Model.Logo" class="center-block roundImg4" style="z-index:99;position:relative;top:10px;" />
+        
+        <!-- Name  -->
+        <h1 class="text-center whitetext" style="position:relative;top:0px;">@Model.Name</h1>
+    </div>
+</div>
+<div style="border-top:solid 2px #ff901d;">&nbsp;</div>
+<div class="text-center">
+    @{ string addy = string.Format("{0} {1}, {2}, {3} {4}", Model.Address, Model.Address2, Model.City, Model.State, Model.Zip); }
+    <h3 style="position:relative;">
+        <a target="_blank" href="../getdirections.aspx?addy=@addy&lat=@Model.Lat&lng=@Model.Lng" class="btn glyphicon glyphicon-map-marker actionlink" style="font-size:18px;"></a>
+        @Model.Address @Model.Address2<br />
+        @Model.City, @Model.State.Abbrev @Model.Zip
+    </h3>
+    <div class="center-block text-center" style="width:90%">@Model.Description</div>
+    <div class="center-block text-center" style="width:90%">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div class="pull-right" style="width:300px;text-align:left;">
+            <div class="text-right">
+                @foreach(VenueSport venuesport in Model.VenueSports)
+                {
+                    <div class="orangeback whitetext" style="margin:20px;padding:5px;width:180px;font-size:22px;">@venuesport.Sport.Longname</div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

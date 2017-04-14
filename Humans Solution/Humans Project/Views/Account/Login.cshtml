@@ -1,0 +1,230 @@
+﻿@model Humans.Web.Models.LoginModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "who ride near";
+}
+
+@section scripts{
+    <script type="text/javascript" src="~/scripts/global.js"></script>
+    <script type="text/javascript" src="~/scripts/login.js"></script>
+}
+
+<div style="position:relative;padding:0px;margin:0px;">
+    <div style="position:absolute;top:10px;z-index:99;text-align:center;width:100%;">
+        <a class="infolink2" href="#whatis">what is humans?</a>&nbsp;<a class="infolink2" href="#whatsports">sports to ride!</a>
+        <a class="infolink" href="#whatis">what is humans?</a>&nbsp;<a class="infolink" href="#whatsports">sports to ride!</a>
+    </div>
+    <div id="spBox" style="overflow:hidden;height:800px;">
+        <img id="stockphoto" src="~/images/stockphoto1.jpg" style="position:relative;top:-100px;" />
+    </div>
+    <div style="position:absolute;top:0px;left:0px;width:100%;padding-top:50px;">
+        <div class="row-fluid">
+            <div class="col-sm-9">
+                @if (TempData["Msg"] != null)
+                {
+                    <div class="alert alert-info text-center" style="opacity:.7;"><h2>@TempData["Msg"]</h2></div>
+                }
+            </div>
+            <div class="col-sm-3">
+                <ul class="nav nav-tabs">
+                    <li class="active" style="opacity:.8;"><a class="greyback whitetext" href="#signupBox" data-toggle="tab">sign Up</a></li>
+                    <li style="opacity:.8;"><a class="greyback whitetext" href="#loginBox" data-toggle="tab">login</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="signupBox" class="tab-pane active orangeback panel" style="opacity:.8;width:100%;padding:10px 0px 20px 0px;">
+                        <div class="panel-body" style="font-size:16px;padding:0px;">
+                            <h3 class="whitetext text-center">join the scene!<br />it's free!</h3>
+                            <hr />
+                            <div class="center-block form-horizontal" style="width:80%;">
+                                <form id="frmSignup" method="post" action="~/account/register">
+                                    <div><input type="text" name="UserName" class="form-control " placeholder="email address" /></div>
+                                    <br/>
+                                    <div><input type="text" name="FirstName" class="form-control" placeholder="first name" /></div>
+                                    <br/>
+                                    <div><input type="text" name="Birthdate" class="form-control" placeholder="birthdate mm/dd/yyyy" /></div>
+                                    <br />
+                                    <div><input type="radio" name="Gender" value="M" class="blacktext" /> male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="Gender" value="F" class="darkgreytext" /> female</div>
+                                    <br />
+                                    <span id="spanCreateAcct" class="btn btn-md btn-info center-block" style="font-size:16px;width:100%;">create account</span>
+
+                                    <h2 class="text-center">OR</h2>
+                                    <a class="lnkFBLogin" data-aid="@System.Configuration.ConfigurationManager.AppSettings["FacebookAppId"]" href="#" onclick="fb_login();" style="width:80%;"><img src="../images/facebook_login.png" style="width:100%;" /></a>
+                                </form>
+                                <form id="frmFacebook" method="post" action="~/account/facebooklogin">
+                                    <input type="hidden" id="fb_Id" name="fb_Id" />
+                                    <input type="hidden" id="fb_FirstName" name="fb_FirstName" />
+                                    <input type="hidden" id="fb_LastName" name="fb_LastName" />
+                                    <input type="hidden" id="fb_Birthdate" name="fb_Birthdate" />
+                                    <input type="hidden" id="fb_Gender" name="fb_Gender" />
+                                    <input type="hidden" id="fb_Email" name="fb_Email" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="loginBox" class="tab-pane orangeback panel" style="opacity:.8;width:100%;padding:10px 0px 20px 0px;">
+                        <div class="panel-body" style="font-size:16px;padding:0px;">
+                            <h3 class="whitetext text-center">log into humans</h3>
+                            <hr />
+                            <div class="center-block form-horizontal" style="width:80%;">
+                        
+                            <form id="frmLogin" method="post" action="~/account/login">
+                                <div style="padding-top:3px;">
+                                    <input type="text" name="UserName" class="form-control enterkey" data-form="#frmLogin" placeholder="email" />
+                                </div>
+                                <div style="text-align:right;">
+                                    <input type="password" name="Password" class="form-control enterkey" data-form="#frmLogin" placeholder="password" />
+                                    <br />
+                                    <span id="spanLogin" class="btn btn-md btn-info center-block" style="font-size:16px;width:100%;">login</span>
+                                    &nbsp;&nbsp;<a href="~/account/forgotpassword" class="whitetext">forgot password</a>
+                                </div>
+                                <h2 class="text-center">OR</h2>
+                                <a class="lnkFBLogin" data-aid="@System.Configuration.ConfigurationManager.AppSettings["FacebookAppId"]" href="#" onclick="fb_login();" style="width:80%;"><img src="../images/facebook_login.png" style="width:100%;" /></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="whatis"></a>
+    <br />
+    <br />
+    <div class="whiteback center-block" style="text-align:center;width:80%;">
+        <h1 class="darkgreytext">what is humans?</h1>
+        <br />
+        <br />
+        <div id="features" class="row" style="font-size:20px;">
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br />
+                        <div><img src="~/images/icon_pin_black.png" class="center-block roundImg" /></div>
+                        <br />
+                        <h3 class="orangeback whitetext">riding spots</h3>
+                        <hr />
+                        discover
+                        <hr />
+                        save
+                        <hr />
+                        share
+                        <hr />
+                        reviews & photos
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br />
+                        <div><img src="~/profilepics/icon_profile.jpg" class="center-block roundImg" /></div>
+                        <br />
+                        <h3 class="orangeback whitetext">local humans</h3>
+                        <hr />
+                        find fellow riders
+                        <hr />
+                        save contacts
+                        <hr />
+                        message
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br />
+                        <div><img src="~/images/icon_services.gif" class="center-block roundImg" /></div>
+                        <br />
+                        <h3 class="orangeback whitetext">professionals</h3>
+                        <hr />
+                        be a coach
+                        <hr />
+                        promote
+                        <hr />
+                        get sponsored
+                        <hr />
+                        receive payments in-app
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a id="whatsports"></a>
+    <br />
+    <br />
+    <div class="whiteback center-block" style="text-align:center;width:80%;">
+        <h1 class="darkgreytext">what sports do we ride?</h1>
+        <br />
+        <br />
+        <div id="features" class="row" style="font-size:20px;">
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br />
+                        <div><img src="~/images/icon_skateboard.png" class="center-block roundImg" /></div>
+                        <br />
+                        <h3 class="orangeback whitetext">board sports</h3>
+                        <hr />
+                        skateboard
+                        <hr />
+                        snowboard
+                        <hr />
+                        wakeboard
+                        <hr />
+                        surfboard
+                        <hr />
+                        longboard
+                        <hr />
+                        ski
+                        <hr />
+                        other board
+                        <hr />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br />
+                        <div><img src="~/images/icon_bike.png" class="center-block roundImg" /></div>
+                        <br />
+                        <h3 class="orangeback whitetext">bike sports</h3>
+                        <hr />
+                        mountain
+                        <hr />
+                        bmx
+                        <hr />
+                        road
+                        <hr />
+                        other bike
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br />
+                        <div><img src="~/images/icon_motorcycle2.png" class="center-block roundImg" /></div>
+                        <br />
+                        <h3 class="orangeback whitetext">motor sports</h3>
+                        <hr />
+                        motorcycle
+                        <hr />
+                        off-road
+                        <hr />
+                        snowmobile
+                        <hr />
+                        jetski
+                        <hr />
+                        autox
+                        <hr />
+                        other motorsport
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height:100px;">&nbsp;</div>

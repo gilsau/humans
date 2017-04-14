@@ -1,0 +1,109 @@
+
+*************************************************************************************************
+2015.06.29 02:15:20 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Value cannot be null.
+Parameter name: input
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Guid.Parse(String input)
+   at Humans.Web.Controllers.MessagesController.Add(String convoid, String msg) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 138
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.06.29 02:17:40 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Value cannot be null.
+Parameter name: input
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Guid.Parse(String input)
+   at Humans.Web.Controllers.MessagesController.Add(String convoid, String msg) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 138
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.06.29 03:00:02 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Value cannot be null.
+Parameter name: input
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Guid.Parse(String input)
+   at Humans.Web.Controllers.MessagesController.Add(String convoid, String msg) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 138
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.06.29 16:15:19 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Unrecognized Guid format.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Guid.GuidResult.SetFailure(ParseFailureKind failure, String failureMessageID, Object failureMessageFormatArgument, String failureArgumentName, Exception innerException)
+   at System.Guid.TryParseGuid(String g, GuidStyles flags, GuidResult& result)
+   at System.Guid.Parse(String input)
+   at Humans.Web.Controllers.MessagesController.Add(String msg, String convoid, Int32 toId) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 138
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.06.29 16:16:00 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Unrecognized Guid format.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Guid.GuidResult.SetFailure(ParseFailureKind failure, String failureMessageID, Object failureMessageFormatArgument, String failureArgumentName, Exception innerException)
+   at System.Guid.TryParseGuid(String g, GuidStyles flags, GuidResult& result)
+   at System.Guid.Parse(String input)
+   at Humans.Web.Controllers.MessagesController.Add(String msg, String convoid, Int32 toId) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 138
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.06.29 16:16:34 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Unrecognized Guid format.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Guid.GuidResult.SetFailure(ParseFailureKind failure, String failureMessageID, Object failureMessageFormatArgument, String failureArgumentName, Exception innerException)
+   at System.Guid.TryParseGuid(String g, GuidStyles flags, GuidResult& result)
+   at System.Guid.Parse(String input)
+   at Humans.Web.Controllers.MessagesController.Add(String msg, String convoid, Int32 toId) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 138
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.06.29 16:22:02 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: An error occurred while updating the entries. See the inner exception for details.
+---------------------------------------
+INNER EXCEPTION An error occurred while updating the entries. See the inner exception for details.
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at Humans.Web.Controllers.MessagesController.Add(String msg, String convoid, Int32 toId) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 166
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.06.29 16:25:08 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: An error occurred while updating the entries. See the inner exception for details.
+---------------------------------------
+INNER EXCEPTION An error occurred while updating the entries. See the inner exception for details.
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at Humans.Web.Controllers.MessagesController.Add(String msg, String convoid, Int32 toId) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 166
+---------------------------------------
+SOURCE: EntityFramework

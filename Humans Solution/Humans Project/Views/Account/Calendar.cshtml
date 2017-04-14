@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Calendar";
+}
+
+@section scripts{
+    <script>
+        $('[data-toggle="popover"]').popover({ trigger: 'hover' });
+    </script>
+}
+
+<div style="height:50px;">&nbsp;</div>
+
+
+<div style="width:80%;margin:auto;">
+    <div style="width:100%;background-color:#ccc;padding:20px;text-align:center;font-weight:bold;font-size:16px;">
+        <div class="pull-left"><a href="#"><<</a></div>
+        MARCH 2015
+        <div class="pull-right"><a href="#">>></a></div>
+    </div>
+    <table class="table table-bordered" style="width:100%;margin:auto;">
+        <tr>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+
+        @{ int c = 1;
+    
+            for(int i = 1; i < 6; i++)
+            {
+                <tr>
+                    @for (int x = 1; x < 8; x++)
+                    {
+                        <td @if(c == 10 || c == 20 || c == 30){ <text>style="background-color:#ff6a00;" data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="Service Job #20350" </text> } ><a href="~/requests/pending">@{ if (c < 32) { @c } }</a></td>
+                        c++;
+                    }
+                </tr>
+            }
+        }
+    </table>
+</div>

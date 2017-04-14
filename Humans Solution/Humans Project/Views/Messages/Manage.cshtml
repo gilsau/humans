@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Manage";
+}
+
+@section scripts{
+    <script type="text/javascript" src="~/scripts/messages.js"></script>
+}
+
+<div class="container-fluid nopad">
+    <div class="row-fluid nopad">
+        <div id="convoLeftPanel" class="col-sm-3 nopad">
+            <div class="panel panel-info">
+                <div class="panel-heading" style="font-size:18px;position:relative;z-index:50;">
+                    <div style="text-align:right;">
+                        <span class="pull-left">conversations</span>
+                        <span id="btnAdd" class="btn btn-md glyphicon glyphicon-plus-sign"></span>
+                    </div>
+                    <span id="addBox"><input type="text" class="form-control" /></span>
+                    <span id="suggestBox"></span>
+                </div>
+                <div class="panel-body nopad">
+                    <div id="convoList" class="list-group nopad nomarg" style="overflow-y:auto;"></div>
+                </div>
+            </div>
+        </div>
+        <div id="convoRightPanel" class="col-sm-9 nopad">
+            <div class="panel panel-info">
+                <div id="convoBoxHeader" class="panel-heading" style="font-size:18px;position:relative;z-index:50;padding:0px 0px 0px 20px;">
+                    <a href="javascript:void();" id="convoListLink" class="glyphicon glyphicon-th-list" style="font-size:20px;"></a>&nbsp;&nbsp;&nbsp;<a id="convoTitle"></a>
+                </div>
+                <div class="panel-body nopad">
+                    <div id="convoBox" class="nopad nomarg">
+                        <div id="convoBox2" style="height:80%;overflow-y:auto;"></div>
+                        <div id="responseSect" style="height:20%;display:none;">
+                            <div style="height:5%;"></div>
+                            <div style="height:20%;">
+                                <span id="btnSend" class="btn btn-sm btn-default pull-right" style="margin-right:10px;">send</span>
+                                <!--<span id="btnUpload" class="glyphicon glyphicon-camera btn pull-right"></span>-->
+                            </div>
+                            <div style="border-top:solid 1px #fcca96;height:75%;"><textarea id="txtMsg" style="height:100%;width:100%;border:none;"></textarea></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

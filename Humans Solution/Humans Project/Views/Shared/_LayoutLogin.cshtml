@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>humans - @ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Css/bootstrap.min.css")
+        @Styles.Render("~/Css/main.css")
+    </head>
+    <body>
+        <header style="margin:0px;padding:0px;">
+            @Html.Partial("HeaderLogin")
+        </header>
+        <div class="container-fluid" style="padding:0px;margin:0px;">
+            <div style="padding:0px;margin:0px;">
+                <div id="mainBody" style="padding:0px;margin:0px;">@RenderBody()</div>
+            </div>
+        </div>
+        <footer>
+            @Html.Partial("Footer")
+        </footer>
+
+        <div id="fb-root"></div>
+    
+        @Scripts.Render("~/scripts/jquery-2.1.3.min.js")
+        @Scripts.Render("~/scripts/facebook.js")
+        @Scripts.Render("~/scripts/bootstrap.min.js")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

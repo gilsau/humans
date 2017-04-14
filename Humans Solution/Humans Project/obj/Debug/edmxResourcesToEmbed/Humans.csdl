@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HumansModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HumansEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="NotificationTypes" EntityType="HumansModel.NotificationType" />
+    <EntitySet Name="Sports" EntityType="HumansModel.Sport" />
+    <EntitySet Name="SportCategories" EntityType="HumansModel.SportCategory" />
+    <EntitySet Name="States" EntityType="HumansModel.State" />
+    <EntitySet Name="Status" EntityType="HumansModel.Status" />
+    <EntitySet Name="UserMessages" EntityType="HumansModel.UserMessage" />
+    <EntitySet Name="UserNotifications" EntityType="HumansModel.UserNotification" />
+    <EntitySet Name="UserProfiles" EntityType="HumansModel.UserProfile" />
+    <EntitySet Name="UserSports" EntityType="HumansModel.UserSport" />
+    <EntitySet Name="UserUsers" EntityType="HumansModel.UserUser" />
+    <EntitySet Name="UserVenues" EntityType="HumansModel.UserVenue" />
+    <EntitySet Name="Venues" EntityType="HumansModel.Venue" />
+    <EntitySet Name="VenueSports" EntityType="HumansModel.VenueSport" />
+    <EntitySet Name="webpages_Membership" EntityType="HumansModel.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="HumansModel.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="HumansModel.webpages_Roles" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="HumansModel.webpages_UsersInRoles" />
+    <AssociationSet Name="fk_UserNotifications_NotificationType" Association="HumansModel.fk_UserNotifications_NotificationType">
+      <End Role="NotificationType" EntitySet="NotificationTypes" />
+      <End Role="UserNotifications" EntitySet="UserNotifications" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Sport_SportCategory" Association="HumansModel.fk_Sport_SportCategory">
+      <End Role="SportCategory" EntitySet="SportCategories" />
+      <End Role="Sport" EntitySet="Sports" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserSports_Sport" Association="HumansModel.fk_UserSports_Sport">
+      <End Role="Sport" EntitySet="Sports" />
+      <End Role="UserSports" EntitySet="UserSports" />
+    </AssociationSet>
+    <AssociationSet Name="fk_VenueSports_Sport" Association="HumansModel.fk_VenueSports_Sport">
+      <End Role="Sport" EntitySet="Sports" />
+      <End Role="VenueSports" EntitySet="VenueSports" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserProfile_State" Association="HumansModel.fk_UserProfile_State">
+      <End Role="State" EntitySet="States" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserProfile_State_Company" Association="HumansModel.fk_UserProfile_State_Company">
+      <End Role="State" EntitySet="States" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Venue_State" Association="HumansModel.fk_Venue_State">
+      <End Role="State" EntitySet="States" />
+      <End Role="Venue" EntitySet="Venues" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserMessages_Status" Association="HumansModel.fk_UserMessages_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="UserMessages" EntitySet="UserMessages" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserNotifications_Status" Association="HumansModel.fk_UserNotifications_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="UserNotifications" EntitySet="UserNotifications" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserMessages_From" Association="HumansModel.fk_UserMessages_From">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="UserMessages" EntitySet="UserMessages" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserMessages_To" Association="HumansModel.fk_UserMessages_To">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="UserMessages" EntitySet="UserMessages" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserNotifications_User" Association="HumansModel.fk_UserNotifications_User">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="UserNotifications" EntitySet="UserNotifications" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserSports_UserProfile" Association="HumansModel.fk_UserSports_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="UserSports" EntitySet="UserSports" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserUsers_Remembered" Association="HumansModel.fk_UserUsers_Remembered">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="UserUsers" EntitySet="UserUsers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserUsers_User" Association="HumansModel.fk_UserUsers_User">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="UserUsers" EntitySet="UserUsers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserVenues_UserProfile" Association="HumansModel.fk_UserVenues_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="UserVenues" EntitySet="UserVenues" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserVenues_Venue" Association="HumansModel.fk_UserVenues_Venue">
+      <End Role="Venue" EntitySet="Venues" />
+      <End Role="UserVenues" EntitySet="UserVenues" />
+    </AssociationSet>
+    <AssociationSet Name="fk_VenueSports_Venue" Association="HumansModel.fk_VenueSports_Venue">
+      <End Role="Venue" EntitySet="Venues" />
+      <End Role="VenueSports" EntitySet="VenueSports" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="NotificationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="UserNotifications" Relationship="HumansModel.fk_UserNotifications_NotificationType" FromRole="NotificationType" ToRole="UserNotifications" />
+  </EntityType>
+  <EntityType Name="Sport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Longname" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SportCategoryId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SportCategory" Relationship="HumansModel.fk_Sport_SportCategory" FromRole="Sport" ToRole="SportCategory" />
+    <NavigationProperty Name="UserSports" Relationship="HumansModel.fk_UserSports_Sport" FromRole="Sport" ToRole="UserSports" />
+    <NavigationProperty Name="VenueSports" Relationship="HumansModel.fk_VenueSports_Sport" FromRole="Sport" ToRole="VenueSports" />
+  </EntityType>
+  <EntityType Name="SportCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Sports" Relationship="HumansModel.fk_Sport_SportCategory" FromRole="SportCategory" ToRole="Sport" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Abbrev" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="UserProfiles" Relationship="HumansModel.fk_UserProfile_State" FromRole="State" ToRole="UserProfile" />
+    <NavigationProperty Name="UserProfiles1" Relationship="HumansModel.fk_UserProfile_State_Company" FromRole="State" ToRole="UserProfile" />
+    <NavigationProperty Name="Venues" Relationship="HumansModel.fk_Venue_State" FromRole="State" ToRole="Venue" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="UserMessages" Relationship="HumansModel.fk_UserMessages_Status" FromRole="Status" ToRole="UserMessages" />
+    <NavigationProperty Name="UserNotifications" Relationship="HumansModel.fk_UserNotifications_Status" FromRole="Status" ToRole="UserNotifications" />
+  </EntityType>
+  <EntityType Name="UserMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FromId" Type="Int32" Nullable="false" />
+    <Property Name="ToId" Type="Int32" Nullable="false" />
+    <Property Name="Msg" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+    <Property Name="ConvoId" Type="Guid" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Status" Relationship="HumansModel.fk_UserMessages_Status" FromRole="UserMessages" ToRole="Status" />
+    <NavigationProperty Name="UserProfile" Relationship="HumansModel.fk_UserMessages_From" FromRole="UserMessages" ToRole="UserProfile" />
+    <NavigationProperty Name="UserProfile1" Relationship="HumansModel.fk_UserMessages_To" FromRole="UserMessages" ToRole="UserProfile" />
+  </EntityType>
+  <EntityType Name="UserNotification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="NotificationTypeId" Type="Int32" Nullable="false" />
+    <Property Name="ReferenceId" Type="Int32" Nullable="false" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="NotificationType" Relationship="HumansModel.fk_UserNotifications_NotificationType" FromRole="UserNotifications" ToRole="NotificationType" />
+    <NavigationProperty Name="Status" Relationship="HumansModel.fk_UserNotifications_Status" FromRole="UserNotifications" ToRole="Status" />
+    <NavigationProperty Name="UserProfile" Relationship="HumansModel.fk_UserNotifications_User" FromRole="UserNotifications" ToRole="UserProfile" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="56" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StateId" Type="Int32" />
+    <Property Name="Zipcode" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="ProfilePic" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Birthdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Company" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyAddress1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyAddress2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyCity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyStateId" Type="Int32" />
+    <Property Name="CompanyZipcode" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyPhone" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="PricePerHrMin" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PricePerHrMax" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Paypal" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="NameOnCard" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreditCardNo" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="ExpDateMo" Type="Int32" />
+    <Property Name="ExpDateYr" Type="Int32" />
+    <Property Name="CardType" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Lat" Type="Double" />
+    <Property Name="Lng" Type="Double" />
+    <Property Name="FB" Type="Boolean" />
+    <NavigationProperty Name="State" Relationship="HumansModel.fk_UserProfile_State" FromRole="UserProfile" ToRole="State" />
+    <NavigationProperty Name="State1" Relationship="HumansModel.fk_UserProfile_State_Company" FromRole="UserProfile" ToRole="State" />
+    <NavigationProperty Name="UserMessages" Relationship="HumansModel.fk_UserMessages_From" FromRole="UserProfile" ToRole="UserMessages" />
+    <NavigationProperty Name="UserMessages1" Relationship="HumansModel.fk_UserMessages_To" FromRole="UserProfile" ToRole="UserMessages" />
+    <NavigationProperty Name="UserNotifications" Relationship="HumansModel.fk_UserNotifications_User" FromRole="UserProfile" ToRole="UserNotifications" />
+    <NavigationProperty Name="UserSports" Relationship="HumansModel.fk_UserSports_UserProfile" FromRole="UserProfile" ToRole="UserSports" />
+    <NavigationProperty Name="UserUsers" Relationship="HumansModel.fk_UserUsers_Remembered" FromRole="UserProfile" ToRole="UserUsers" />
+    <NavigationProperty Name="UserUsers1" Relationship="HumansModel.fk_UserUsers_User" FromRole="UserProfile" ToRole="UserUsers" />
+    <NavigationProperty Name="UserVenues" Relationship="HumansModel.fk_UserVenues_UserProfile" FromRole="UserProfile" ToRole="UserVenues" />
+  </EntityType>
+  <EntityType Name="UserSport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="SportId" Type="Int32" Nullable="false" />
+    <Property Name="Findable" Type="Boolean" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="SkillLevel" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Sport" Relationship="HumansModel.fk_UserSports_Sport" FromRole="UserSports" ToRole="Sport" />
+    <NavigationProperty Name="UserProfile" Relationship="HumansModel.fk_UserSports_UserProfile" FromRole="UserSports" ToRole="UserProfile" />
+  </EntityType>
+  <EntityType Name="UserUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RememberedId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserProfile" Relationship="HumansModel.fk_UserUsers_Remembered" FromRole="UserUsers" ToRole="UserProfile" />
+    <NavigationProperty Name="UserProfile1" Relationship="HumansModel.fk_UserUsers_User" FromRole="UserUsers" ToRole="UserProfile" />
+  </EntityType>
+  <EntityType Name="UserVenue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="VenueId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserProfile" Relationship="HumansModel.fk_UserVenues_UserProfile" FromRole="UserVenues" ToRole="UserProfile" />
+    <NavigationProperty Name="Venue" Relationship="HumansModel.fk_UserVenues_Venue" FromRole="UserVenues" ToRole="Venue" />
+  </EntityType>
+  <EntityType Name="Venue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="StateId" Type="Int32" Nullable="false" />
+    <Property Name="Zip" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Lat" Type="Double" />
+    <Property Name="Lng" Type="Double" />
+    <Property Name="PlaceId" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Logo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="State" Relationship="HumansModel.fk_Venue_State" FromRole="Venue" ToRole="State" />
+    <NavigationProperty Name="UserVenues" Relationship="HumansModel.fk_UserVenues_Venue" FromRole="Venue" ToRole="UserVenues" />
+    <NavigationProperty Name="VenueSports" Relationship="HumansModel.fk_VenueSports_Venue" FromRole="Venue" ToRole="VenueSports" />
+  </EntityType>
+  <EntityType Name="VenueSport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="VenueId" Type="Int32" Nullable="false" />
+    <Property Name="SportId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Sport" Relationship="HumansModel.fk_VenueSports_Sport" FromRole="VenueSports" ToRole="Sport" />
+    <NavigationProperty Name="Venue" Relationship="HumansModel.fk_VenueSports_Venue" FromRole="VenueSports" ToRole="Venue" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsConfirmed" Type="Boolean" />
+    <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ProviderUserId" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_UserNotifications_NotificationType">
+    <End Role="NotificationType" Type="HumansModel.NotificationType" Multiplicity="1" />
+    <End Role="UserNotifications" Type="HumansModel.UserNotification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotificationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserNotifications">
+        <PropertyRef Name="NotificationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Sport_SportCategory">
+    <End Role="SportCategory" Type="HumansModel.SportCategory" Multiplicity="1" />
+    <End Role="Sport" Type="HumansModel.Sport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SportCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sport">
+        <PropertyRef Name="SportCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserSports_Sport">
+    <End Role="Sport" Type="HumansModel.Sport" Multiplicity="1" />
+    <End Role="UserSports" Type="HumansModel.UserSport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sport">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserSports">
+        <PropertyRef Name="SportId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_VenueSports_Sport">
+    <End Role="Sport" Type="HumansModel.Sport" Multiplicity="1" />
+    <End Role="VenueSports" Type="HumansModel.VenueSport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sport">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VenueSports">
+        <PropertyRef Name="SportId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserProfile_State">
+    <End Role="State" Type="HumansModel.State" Multiplicity="0..1" />
+    <End Role="UserProfile" Type="HumansModel.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserProfile_State_Company">
+    <End Role="State" Type="HumansModel.State" Multiplicity="0..1" />
+    <End Role="UserProfile" Type="HumansModel.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="CompanyStateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Venue_State">
+    <End Role="State" Type="HumansModel.State" Multiplicity="1" />
+    <End Role="Venue" Type="HumansModel.Venue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Venue">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserMessages_Status">
+    <End Role="Status" Type="HumansModel.Status" Multiplicity="0..1" />
+    <End Role="UserMessages" Type="HumansModel.UserMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMessages">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserNotifications_Status">
+    <End Role="Status" Type="HumansModel.Status" Multiplicity="1" />
+    <End Role="UserNotifications" Type="HumansModel.UserNotification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserNotifications">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserMessages_From">
+    <End Role="UserProfile" Type="HumansModel.UserProfile" Multiplicity="1" />
+    <End Role="UserMessages" Type="HumansModel.UserMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserMessages">
+        <PropertyRef Name="FromId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserMessages_To">
+    <End Role="UserProfile" Type="HumansModel.UserProfile" Multiplicity="1" />
+    <End Role="UserMessages" Type="HumansModel.UserMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserMessages">
+        <PropertyRef Name="ToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserNotifications_User">
+    <End Role="UserProfile" Type="HumansModel.UserProfile" Multiplicity="1" />
+    <End Role="UserNotifications" Type="HumansModel.UserNotification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserNotifications">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserSports_UserProfile">
+    <End Role="UserProfile" Type="HumansModel.UserProfile" Multiplicity="1" />
+    <End Role="UserSports" Type="HumansModel.UserSport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserSports">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserUsers_Remembered">
+    <End Role="UserProfile" Type="HumansModel.UserProfile" Multiplicity="1" />
+    <End Role="UserUsers" Type="HumansModel.UserUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserUsers">
+        <PropertyRef Name="RememberedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserUsers_User">
+    <End Role="UserProfile" Type="HumansModel.UserProfile" Multiplicity="1" />
+    <End Role="UserUsers" Type="HumansModel.UserUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserUsers">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserVenues_UserProfile">
+    <End Role="UserProfile" Type="HumansModel.UserProfile" Multiplicity="1" />
+    <End Role="UserVenues" Type="HumansModel.UserVenue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserVenues">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserVenues_Venue">
+    <End Role="Venue" Type="HumansModel.Venue" Multiplicity="1" />
+    <End Role="UserVenues" Type="HumansModel.UserVenue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserVenues">
+        <PropertyRef Name="VenueId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_VenueSports_Venue">
+    <End Role="Venue" Type="HumansModel.Venue" Multiplicity="1" />
+    <End Role="VenueSports" Type="HumansModel.VenueSport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VenueSports">
+        <PropertyRef Name="VenueId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

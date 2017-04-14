@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HumansModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="HumansModelStoreContainer">
+    <EntitySet Name="NotificationType" EntityType="HumansModel.Store.NotificationType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sport" EntityType="HumansModel.Store.Sport" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SportCategory" EntityType="HumansModel.Store.SportCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="State" EntityType="HumansModel.Store.State" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Status" EntityType="HumansModel.Store.Status" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserMessages" EntityType="HumansModel.Store.UserMessages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserNotifications" EntityType="HumansModel.Store.UserNotifications" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserProfile" EntityType="HumansModel.Store.UserProfile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSports" EntityType="HumansModel.Store.UserSports" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserUsers" EntityType="HumansModel.Store.UserUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserVenues" EntityType="HumansModel.Store.UserVenues" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Venue" EntityType="HumansModel.Store.Venue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VenueSports" EntityType="HumansModel.Store.VenueSports" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Membership" EntityType="HumansModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="HumansModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Roles" EntityType="HumansModel.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="HumansModel.Store.webpages_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk_Sport_SportCategory" Association="HumansModel.Store.fk_Sport_SportCategory">
+      <End Role="SportCategory" EntitySet="SportCategory" />
+      <End Role="Sport" EntitySet="Sport" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserMessages_From" Association="HumansModel.Store.fk_UserMessages_From">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserMessages" EntitySet="UserMessages" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserMessages_Status" Association="HumansModel.Store.fk_UserMessages_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="UserMessages" EntitySet="UserMessages" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserMessages_To" Association="HumansModel.Store.fk_UserMessages_To">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserMessages" EntitySet="UserMessages" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserNotifications_NotificationType" Association="HumansModel.Store.fk_UserNotifications_NotificationType">
+      <End Role="NotificationType" EntitySet="NotificationType" />
+      <End Role="UserNotifications" EntitySet="UserNotifications" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserNotifications_Status" Association="HumansModel.Store.fk_UserNotifications_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="UserNotifications" EntitySet="UserNotifications" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserNotifications_User" Association="HumansModel.Store.fk_UserNotifications_User">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserNotifications" EntitySet="UserNotifications" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserProfile_State" Association="HumansModel.Store.fk_UserProfile_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="UserProfile" EntitySet="UserProfile" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserProfile_State_Company" Association="HumansModel.Store.fk_UserProfile_State_Company">
+      <End Role="State" EntitySet="State" />
+      <End Role="UserProfile" EntitySet="UserProfile" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserSports_Sport" Association="HumansModel.Store.fk_UserSports_Sport">
+      <End Role="Sport" EntitySet="Sport" />
+      <End Role="UserSports" EntitySet="UserSports" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserSports_UserProfile" Association="HumansModel.Store.fk_UserSports_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserSports" EntitySet="UserSports" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserUsers_Remembered" Association="HumansModel.Store.fk_UserUsers_Remembered">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserUsers" EntitySet="UserUsers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserUsers_User" Association="HumansModel.Store.fk_UserUsers_User">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserUsers" EntitySet="UserUsers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserVenues_UserProfile" Association="HumansModel.Store.fk_UserVenues_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserVenues" EntitySet="UserVenues" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserVenues_Venue" Association="HumansModel.Store.fk_UserVenues_Venue">
+      <End Role="Venue" EntitySet="Venue" />
+      <End Role="UserVenues" EntitySet="UserVenues" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Venue_State" Association="HumansModel.Store.fk_Venue_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="Venue" EntitySet="Venue" />
+    </AssociationSet>
+    <AssociationSet Name="fk_VenueSports_Sport" Association="HumansModel.Store.fk_VenueSports_Sport">
+      <End Role="Sport" EntitySet="Sport" />
+      <End Role="VenueSports" EntitySet="VenueSports" />
+    </AssociationSet>
+    <AssociationSet Name="fk_VenueSports_Venue" Association="HumansModel.Store.fk_VenueSports_Venue">
+      <End Role="Venue" EntitySet="Venue" />
+      <End Role="VenueSports" EntitySet="VenueSports" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="NotificationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Longname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SportCategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SportCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Abbrev" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="UserMessages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FromId" Type="int" Nullable="false" />
+    <Property Name="ToId" Type="int" Nullable="false" />
+    <Property Name="Msg" Type="nvarchar" MaxLength="2000" />
+    <Property Name="ConvoId" Type="uniqueidentifier" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserNotifications">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="NotificationTypeId" Type="int" Nullable="false" />
+    <Property Name="ReferenceId" Type="int" Nullable="false" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="56" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="Zipcode" Type="nvarchar" MaxLength="15" />
+    <Property Name="ProfilePic" Type="nvarchar" MaxLength="250" />
+    <Property Name="Gender" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Birthdate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company" Type="nvarchar" MaxLength="100" />
+    <Property Name="CompanyAddress1" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyAddress2" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyStateId" Type="int" />
+    <Property Name="CompanyZipcode" Type="nvarchar" MaxLength="15" />
+    <Property Name="CompanyPhone" Type="nvarchar" MaxLength="15" />
+    <Property Name="PricePerHrMin" Type="decimal" />
+    <Property Name="PricePerHrMax" Type="decimal" />
+    <Property Name="Paypal" Type="nvarchar" MaxLength="250" />
+    <Property Name="NameOnCard" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreditCardNo" Type="nvarchar" MaxLength="16" />
+    <Property Name="ExpDateMo" Type="int" />
+    <Property Name="ExpDateYr" Type="int" />
+    <Property Name="CardType" Type="nvarchar" MaxLength="10" />
+    <Property Name="Lat" Type="float" />
+    <Property Name="Lng" Type="float" />
+    <Property Name="FB" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserSports">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="SportId" Type="int" Nullable="false" />
+    <Property Name="Findable" Type="bit" Nullable="false" />
+    <Property Name="Note" Type="text" />
+    <Property Name="SkillLevel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RememberedId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserVenues">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="VenueId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Venue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="250" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="StateId" Type="int" Nullable="false" />
+    <Property Name="Zip" Type="nvarchar" MaxLength="15" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Lat" Type="float" />
+    <Property Name="Lng" Type="float" />
+    <Property Name="PlaceId" Type="nvarchar" MaxLength="200" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="VenueSports">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VenueId" Type="int" Nullable="false" />
+    <Property Name="SportId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_Sport_SportCategory">
+    <End Role="SportCategory" Type="HumansModel.Store.SportCategory" Multiplicity="1" />
+    <End Role="Sport" Type="HumansModel.Store.Sport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SportCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sport">
+        <PropertyRef Name="SportCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserMessages_From">
+    <End Role="UserProfile" Type="HumansModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="UserMessages" Type="HumansModel.Store.UserMessages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserMessages">
+        <PropertyRef Name="FromId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserMessages_Status">
+    <End Role="Status" Type="HumansModel.Store.Status" Multiplicity="0..1" />
+    <End Role="UserMessages" Type="HumansModel.Store.UserMessages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMessages">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserMessages_To">
+    <End Role="UserProfile" Type="HumansModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="UserMessages" Type="HumansModel.Store.UserMessages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserMessages">
+        <PropertyRef Name="ToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserNotifications_NotificationType">
+    <End Role="NotificationType" Type="HumansModel.Store.NotificationType" Multiplicity="1" />
+    <End Role="UserNotifications" Type="HumansModel.Store.UserNotifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotificationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserNotifications">
+        <PropertyRef Name="NotificationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserNotifications_Status">
+    <End Role="Status" Type="HumansModel.Store.Status" Multiplicity="1" />
+    <End Role="UserNotifications" Type="HumansModel.Store.UserNotifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserNotifications">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserNotifications_User">
+    <End Role="UserProfile" Type="HumansModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="UserNotifications" Type="HumansModel.Store.UserNotifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserNotifications">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserProfile_State">
+    <End Role="State" Type="HumansModel.Store.State" Multiplicity="0..1" />
+    <End Role="UserProfile" Type="HumansModel.Store.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserProfile_State_Company">
+    <End Role="State" Type="HumansModel.Store.State" Multiplicity="0..1" />
+    <End Role="UserProfile" Type="HumansModel.Store.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="CompanyStateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserSports_Sport">
+    <End Role="Sport" Type="HumansModel.Store.Sport" Multiplicity="1" />
+    <End Role="UserSports" Type="HumansModel.Store.UserSports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sport">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserSports">
+        <PropertyRef Name="SportId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserSports_UserProfile">
+    <End Role="UserProfile" Type="HumansModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="UserSports" Type="HumansModel.Store.UserSports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserSports">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserUsers_Remembered">
+    <End Role="UserProfile" Type="HumansModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="UserUsers" Type="HumansModel.Store.UserUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserUsers">
+        <PropertyRef Name="RememberedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserUsers_User">
+    <End Role="UserProfile" Type="HumansModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="UserUsers" Type="HumansModel.Store.UserUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserUsers">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserVenues_UserProfile">
+    <End Role="UserProfile" Type="HumansModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="UserVenues" Type="HumansModel.Store.UserVenues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserVenues">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserVenues_Venue">
+    <End Role="Venue" Type="HumansModel.Store.Venue" Multiplicity="1" />
+    <End Role="UserVenues" Type="HumansModel.Store.UserVenues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserVenues">
+        <PropertyRef Name="VenueId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Venue_State">
+    <End Role="State" Type="HumansModel.Store.State" Multiplicity="1" />
+    <End Role="Venue" Type="HumansModel.Store.Venue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Venue">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_VenueSports_Sport">
+    <End Role="Sport" Type="HumansModel.Store.Sport" Multiplicity="1" />
+    <End Role="VenueSports" Type="HumansModel.Store.VenueSports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sport">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VenueSports">
+        <PropertyRef Name="SportId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_VenueSports_Venue">
+    <End Role="Venue" Type="HumansModel.Store.Venue" Multiplicity="1" />
+    <End Role="VenueSports" Type="HumansModel.Store.VenueSports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venue">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VenueSports">
+        <PropertyRef Name="VenueId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

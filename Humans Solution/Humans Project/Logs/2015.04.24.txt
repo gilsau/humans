@@ -1,0 +1,64 @@
+
+*************************************************************************************************
+2015.04.24 06:31:55 ||| MESSAGE:Failure sending mail. --- INNER-EXCEPTION:System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String& response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message) --- SOURCE:System --- STACK-TRACE:   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at WinnerInTheMaking.BackOffice.Helpers.Emailer.SendMail(String subject, String body, String toAddress, Result& scr) in e:\_Web Development\Equity Apps\Justin\Justin\Justin\Helpers\Emailer.cs:line 48
+
+*************************************************************************************************
+2015.04.24 06:41:40 ||| MESSAGE:Failure sending mail. --- INNER-EXCEPTION:System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String& response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message) --- SOURCE:System --- STACK-TRACE:   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at WinnerInTheMaking.BackOffice.Helpers.Emailer.SendMail(String subject, String body, String toAddress, Result& scr) in e:\_Web Development\Equity Apps\Justin\WinnerInTheMaking\WinnerInTheMaking\Helpers\Emailer.cs:line 48
+
+*************************************************************************************************
+2015.04.24 11:47:11 ||| Failure sending mail.
+
+Unable to connect to the remote server
+
+System
+
+*************************************************************************************************
+2015.04.24 11:48:59 ||| Failure sending mail.
+
+Unable to connect to the remote server
+
+System
+
+*************************************************************************************************
+2015.04.24 11:59:16 ||| Failure sending mail.
+
+Unable to connect to the remote server
+
+System
+
+*************************************************************************************************
+2015.04.24 12:04:06 ||| Failure sending mail.
+
+Unable to connect to the remote server
+
+System
+
+*************************************************************************************************
+2015.04.24 13:16:43 ||| Failure sending mail.
+
+Unable to connect to the remote server
+
+System
+
+*************************************************************************************************
+2015.04.24 15:32:38 ||| Failure sending mail.
+
+Unable to connect to the remote server
+
+System

@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Humans.Web.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SMTP_Host" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">relay-hosting.secureserver.net</Value>
+    </Setting>
+    <Setting Name="SMTP_Username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">admin@humanwhoride.net</Value>
+    </Setting>
+    <Setting Name="SMTP_Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Humansrock1</Value>
+    </Setting>
+    <Setting Name="Facebook_App_Id" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">534870156661986</Value>
+    </Setting>
+    <Setting Name="Facebook_App_Secret" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">fd76cd91dac60ec5e35351d6a7e947e1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

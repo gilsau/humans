@@ -1,0 +1,286 @@
+﻿@using Humans.Web
+@using Humans.Web.Models
+@model MyProfileModel
+@{ ViewBag.Title = "My Profile";
+   string profilepic = Model.ProfilePicLoad;
+   if (!Model.FB) { profilepic = "../profilepics/" + profilepic; }
+}
+
+@section scripts{
+    <script type="text/javascript" src="~/scripts/myprofile.js"></script>
+}
+
+<div class="container-fluid" style="position:relative;padding:0px;margin:0px;">
+    <div class="row-fluid bgProfile" style="opacity:.5;
+                                            width:100%;
+                                            height:230px;
+                                            background-image:url(@profilepic);
+                                            background-position:50% 50%;
+                                            background-size:100% 300%;
+                                            background-repeat:no-repeat;
+                                            /*-webkit-filter: blur(5px);-moz-filter: blur(5px);-o-filter: blur(5px);-ms-filter: blur(5px);filter: blur(5px);*/">
+    </div>
+    <div class="orangeoverlay" style="position:absolute;top:0px;left:0px;width:100%;height:230px;">&nbsp;</div>
+    <div style="position:absolute;top:20px;left:0px;width:100%;">
+        <img src="@profilepic" class="center-block roundImg2" />
+        <div class="center-block" style="width:200px;position:relative;">
+            @if(!Model.FB){
+                <span class="btn whitetext glyphicon glyphicon-camera" style="position:absolute;top:-30px;left:150px;font-size:20px;" title="update photo"></span>
+            }
+        </div>
+    </div>
+</div>
+<div style="border-top:solid 2px #ff901d;">&nbsp;</div>
+<br />
+<form id="frmProfile" method="post" enctype="multipart/form-data">
+    <h3 class="lightorangeback whitetext center-block" style="width:90%;">
+        PROFILE INFO
+        <span class="pull-right" style="font-size:18px;">* required</span>
+        @if(Model.FB){<span class="pull-right" style="font-size:18px;">(edit your info on facebook)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}
+    </h3>
+    <div class="container-fluid center-block" style="width:90%;">
+        <div class="row-fluid" style="padding:0px;margin:0px;">
+        <div class="col-sm-6">
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">First Name *</span>
+                <input type="text" class="form-control" placeholder="first" value="@Model.FirstName"  id="FirstName" @if(Model.FB){<text>disabled="disabled"</text>} />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Middle Name</span>
+                <input type="text" class="form-control" placeholder="middle" value="@Model.MiddleName"  id="MiddleName" @if(Model.FB){<text>disabled="disabled"</text>} />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Last Name </span>
+                <input type="text" class="form-control" placeholder="last" value="@Model.LastName"  id="LastName" @if(Model.FB){<text>disabled="disabled"</text>} />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">City</span>
+                <input type="text" class="form-control" placeholder="city" value="@Model.City" id="City" @if(Model.FB){<text>disabled="disabled"</text>} />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">State</span>
+                <select class="form-control" id="StateId" @if(Model.FB){<text>disabled="disabled"</text>}>
+                    <option value="0">select state</option>
+                    @foreach (var item in Model.States)
+                    {
+                        <option value="@item.Id" @{ if(Model.StateId == item.Id){<text>selected="selected"</text>} } >@item.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Zipcode</span>
+                <input type="text" class="form-control" placeholder="zipcode" value="@Model.Zipcode" id="Zipcode"  @if(Model.FB){<text>disabled="disabled"</text>} />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Email *</span>
+                <input type="text" class="form-control" value="@Model.UserName" id="UserName" disabled="disabled" />
+            </div>
+            <div class="greytext" style="text-align:right;">this is also your username</div>
+
+            <p>&nbsp;</p>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Password</span>
+                <input type="password" class="form-control" placeholder="password" id="Password" @if(Model.FB){<text>disabled="disabled"</text>} />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Confirm</span>
+                <input type="password" class="form-control" placeholder="confirm password" id="ConfirmPassword" @if(Model.FB){<text>disabled="disabled"</text>} />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Birthdate</span>
+                <input type="text" class="form-control" placeholder="birthdate" value="@string.Format("{0:MM/dd/yyyy}", Model.Birthdate)" id="Birthdate" @if(Model.FB){<text>disabled="disabled"</text>} />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Gender</span>
+                &nbsp;
+                <input type="radio" name="Gender" value="M" @if(Model.Gender == "M"){<text>checked="checked"</text>} @if(Model.FB){<text>disabled="disabled"</text>} /> Male
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="Gender" value="F" @if(Model.Gender == "F"){<text>checked="checked"</text>} @if(Model.FB){<text>disabled="disabled"</text>} /> Female
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br />
+    <br />
+    <h3 class="lightorangeback whitetext center-block" style="width:90%;">
+        YOUR SERVICES
+        <span class="pull-right" style="font-size:18px;"><b>note:</b> exposure depends on membership level</span>
+    </h3>
+    <div class="container-fluid center-block" style="width:90%;">
+        <div class="row-fluid" style="padding:0px;margin:0px;">
+        <div class="col-sm-6">
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Title</span>
+                <input type="text" class="form-control" placeholder="title" value="@Model.Title"  id="Title" />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Company</span>
+                <input type="text" class="form-control" placeholder="company name" value="@Model.Company"  id="Company" />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Address</span>
+                <div><input type="text" class="form-control" placeholder="address" value="@Model.CompanyAddress1" id="CompanyAddress1" /></div>
+                <div><input type="text" class="form-control" placeholder="address cont." value="@Model.CompanyAddress2" id="CompanyAddress2" /></div>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">City</span>
+                <input type="text" class="form-control" placeholder="city" value="@Model.CompanyCity" id="CompanyCity" />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">State</span>
+                <select class="form-control" id="CompanyStateId">
+                    <option value="0">select state</option>
+                    @foreach (var item in Model.States)
+                    {
+                        <option value="@item.Id" @{ if (Model.CompanyStateId == item.Id) {<text>selected="selected"</text>} } >@item.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Zipcode</span>
+                <input type="text" class="form-control" placeholder="zipcode" value="@Model.CompanyZipcode" id="CompanyZipcode" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Phone</span>
+                <input type="text" class="form-control" placeholder="contact number" value="@Model.CompanyPhone" id="CompanyPhone" />
+            </div>
+            <div class="input-group" style="text-align:center;">
+                <span class="input-group-addon lightorangeback whitetext">Hourly Rate Range $</span>
+                <span id="rateDisplay"></span>
+                <div id="sliderRate" data-PricePerHrMin="@Model.PricePerHrMin" data-PricePerHrMax="@Model.PricePerHrMax" class="center-block" style="width:80%;margin:0px 20px 0px 30px;"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br />
+    <br />
+    <h3 class="lightorangeback whitetext center-block" style="width:90%;">MEMBERSHIP</h3>
+    <div class="container-fluid center-block" style="width:90%;">
+        <div id="memberSection" class="row-fluid" style="padding:20px 0px 0px 0px;margin:0px;">
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text-align:center;font-weight:bold;">FREE</div>
+                <div class="panel-body" style="padding:0px;">
+                    <table class="table table-bordered table-hover">
+                        <tr><td>FEATURE 1</td></tr>
+                        <tr><td>FEATURE 2</td></tr>
+                        <tr><td>FEATURE 3</td></tr>
+                        <tr><td>FEATURE 4</td></tr>
+                        <tr><td>FEATURE 5</td></tr>
+                        <tr><td>FEATURE 6</td></tr>
+                        <tr><td>FEATURE 7</td></tr>
+                    </table>
+                    <div style="text-align:center;margin:27px;">
+                        <b>SUBSCRIBED</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text-align:center;font-weight:bold;">SILVER</div>
+                <div class="panel-body" style="padding:0px;">
+                    <table class="table table-bordered table-hover">
+                        <tr><td>FEATURE 1</td></tr>
+                        <tr><td>FEATURE 2</td></tr>
+                        <tr><td>FEATURE 3</td></tr>
+                        <tr><td>FEATURE 4</td></tr>
+                        <tr><td>FEATURE 5</td></tr>
+                        <tr><td>FEATURE 6</td></tr>
+                        <tr><td>FEATURE 7</td></tr>
+                    </table>
+                    <div style="text-align:center;margin-bottom:20px;">
+                        <a class="btn">UPGRADE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text-align:center;font-weight:bold;">GOLD</div>
+                <div class="panel-body" style="padding:0px;">
+                    <table class="table table-bordered table-hover">
+                        <tr><td>FEATURE 1</td></tr>
+                        <tr><td>FEATURE 2</td></tr>
+                        <tr><td>FEATURE 3</td></tr>
+                        <tr><td>FEATURE 4</td></tr>
+                        <tr><td>FEATURE 5</td></tr>
+                        <tr><td>FEATURE 6</td></tr>
+                        <tr><td>FEATURE 7</td></tr>
+                    </table>
+                    <div style="text-align:center;margin-bottom:20px;">
+                        <a class="btn">UPGRADE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br />
+    <br />
+    <h3 class="lightorangeback whitetext center-block" style="width:90%;">
+        BILLING INFO
+        <span class="pull-right" style="font-size:18px;"><b>note:</b> optional, save info to make cashless payments</span>
+    </h3>
+    <div class="container-fluid center-block" style="width:90%;">
+        <div class="row-fluid" style="padding:0px;margin:0px;">
+        <div class="col-sm-5">
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Paypal Email</span>
+                <input type="text" class="form-control" placeholder="someone@domain.com" value="@Model.Paypal" id="Paypal" />
+            </div>
+            <span class="pull-right">(needed to send/receive payments)</span>
+        </div>
+        <div class="col-sm-2" style="text-align:center;font-size:20px;padding:10px;">
+            OR
+        </div>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Name on Card</span>
+                <input type="text" class="form-control" placeholder="name on credit card" value="@Model.NameOnCard" id="NameOnCard" />
+            </div>
+            <div class="input-group">
+                @{ string cc1 = !string.IsNullOrEmpty(Model.CreditCardNo) ? Model.CreditCardNo.Substring(0, 4) : string.Empty;
+                   string cc2 = !string.IsNullOrEmpty(Model.CreditCardNo) ? Model.CreditCardNo.Substring(4, 4) : string.Empty;
+                   string cc3 = !string.IsNullOrEmpty(Model.CreditCardNo) ? Model.CreditCardNo.Substring(8, 4) : string.Empty;
+                   string cc4 = !string.IsNullOrEmpty(Model.CreditCardNo) ? Model.CreditCardNo.Substring(12, 4) : string.Empty;
+                }
+                <span class="input-group-addon lightorangeback whitetext">Credit Card #</span>
+                <input type="text" class="form-control" value="@cc1" placeholder="####" style="width:25%;" id="cc1" />
+                <input type="text" class="form-control" value="@cc2" placeholder="####" style="width:25%;" id="cc2" />
+                <input type="text" class="form-control" value="@cc3" placeholder="####" style="width:25%;" id="cc3" />
+                <input type="text" class="form-control" value="@cc4" placeholder="####" style="width:25%;" id="cc4" />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Expiration Date</span>
+                <input type="text" class="form-control" value="@Model.ExpDateMo" placeholder="MM" style="width:30%;" id="ExpDateMo" />
+                <input type="text" class="form-control" value="@Model.ExpDateYr" placeholder="YY" style="width:30%;" id="ExpDateYr" />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon lightorangeback whitetext">Card Type</span>
+                <input type="radio" name="CardType" value="mc" @if(Model.CardType == "mc"){<text>checked="checked"</text>} style="margin:10px 5px 0px 10px;" /> Mastercard
+                <input type="radio" name="CardType" value="visa" @if(Model.CardType == "visa"){<text>checked="checked"</text>} style="margin:10px 5px 0px 30px;" />Visa
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <input type="file" id="ProfilePic" style="visibility:hidden;" />
+</form>
+
+
+<br />
+<br />
+<div class="save darkgreytext text-center" style="font-size:34px;">
+    <b class="btn" style="font-size:34px;">save.</b>
+    <img src="~/images/loading_animated.gif" style="height:30px;display:none;" />
+    <span class="ok glyphicon glyphicon-ok-sign" style="display:none;"></span>
+    <span class="err glyphicon glyphicon-exclamation-sign" style="display:none;"></span>
+</div>

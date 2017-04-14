@@ -1,0 +1,150 @@
+
+*************************************************************************************************
+2015.07.07 05:58:46 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Object reference not set to an instance of an object.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at Humans.Web.Controllers.MessagesController.GetNotifications() in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 35
+---------------------------------------
+SOURCE: Humans.Web
+
+*************************************************************************************************
+2015.07.07 06:02:39 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Object reference not set to an instance of an object.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at Humans.Web.Controllers.MessagesController.GetNotifications() in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 35
+---------------------------------------
+SOURCE: Humans.Web
+
+*************************************************************************************************
+2015.07.07 06:02:40 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Object reference not set to an instance of an object.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at Humans.Web.Controllers.MessagesController.GetNotifications() in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 35
+---------------------------------------
+SOURCE: Humans.Web
+
+*************************************************************************************************
+2015.07.07 06:02:41 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Object reference not set to an instance of an object.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at Humans.Web.Controllers.MessagesController.GetNotifications() in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 35
+---------------------------------------
+SOURCE: Humans.Web
+
+*************************************************************************************************
+2015.07.07 06:02:42 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Object reference not set to an instance of an object.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at Humans.Web.Controllers.MessagesController.GetNotifications() in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 35
+---------------------------------------
+SOURCE: Humans.Web
+
+*************************************************************************************************
+2015.07.07 06:02:42 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Object reference not set to an instance of an object.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at Humans.Web.Controllers.MessagesController.GetNotifications() in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 35
+---------------------------------------
+SOURCE: Humans.Web
+
+*************************************************************************************************
+2015.07.07 06:02:52 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Non-static method requires a target.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Reflection.RuntimeMethodInfo.CheckConsistency(Object target)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryGetFieldOrPropertyValue(MemberExpression me, Object instance, Object& memberValue)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryEvaluatePath(Expression expression, ConstantExpression& constantExpression)
+   at System.Data.Objects.ELinq.QueryParameterExpression.EvaluateParameter(Object[] arguments)
+   at System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at Humans.Web.Controllers.MessagesController.GetNotifications() in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 142
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.07.07 06:02:52 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Non-static method requires a target.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Reflection.RuntimeMethodInfo.CheckConsistency(Object target)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryGetFieldOrPropertyValue(MemberExpression me, Object instance, Object& memberValue)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryEvaluatePath(Expression expression, ConstantExpression& constantExpression)
+   at System.Data.Objects.ELinq.QueryParameterExpression.EvaluateParameter(Object[] arguments)
+   at System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at Humans.Web.Controllers.MessagesController.GetNotifications() in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 142
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.07.07 06:02:52 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Non-static method requires a target.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Reflection.RuntimeMethodInfo.CheckConsistency(Object target)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryGetFieldOrPropertyValue(MemberExpression me, Object instance, Object& memberValue)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryEvaluatePath(Expression expression, ConstantExpression& constantExpression)
+   at System.Data.Objects.ELinq.QueryParameterExpression.EvaluateParameter(Object[] arguments)
+   at System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at Humans.Web.Controllers.MessagesController.GetNotifications() in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 142
+---------------------------------------
+SOURCE: mscorlib

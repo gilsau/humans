@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Trash";
+}
+
+<div style="height:50px;">&nbsp;</div>
+<div style="text-align:center;">
+    <a href="#">Empty Trash</a>
+</div>
+<table class="table table-bordered" style="width:95%;margin:auto;">
+    <thead>
+        <tr>
+            <th>To</th>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><div><a href="~/account/myprofile?id=1"><img src="~/profilepics/profilepic_bill_gates.jpg" style="height:35px;" /></a></div>
+                <div>Bill Gates</div>
+                <div>Redmond, Wa</div>
+            </td>
+            <td>Can I get more info?</td>
+            <td>Saturday, May 10th 2015 9:00pm CST</td>
+            <td style="vertical-align:bottom;">
+                <div><a href="#" data-toggle="modal">Move To Inbox</a></div>
+                <div><a href="#msg1" data-toggle="collapse">View/Hide Msg</a></div>
+            </td>
+        </tr>
+        <tr id="msg1" class="collapse">
+            <td colspan="4">
+                Hi Bill,<br />
+                <br />
+                I have more than 10 years experience. I can send you references if you'd like.<br />
+                <br />
+                - Kathy<br />
+                <br />
+                
+                <h5 style="color:#656565;font-weight:bold;">
+                    From:Bill Gates<br />
+                    Date: 05/10/2015 9pm CST
+                </h5>
+                
+                Hi Kathy,<br />
+                <br />
+                Can I get more info about your experience?<br />
+                <br />
+                Thanks,<br />
+                <br />
+                - Bill
+            </td>
+        </tr>
+        <tr><td colspan="4" style="background-color:#ccc;">&nbsp;</td></tr>
+        <tr>
+            <td><div><a href="~/account/myprofile?id=1"><img src="~/profilepics/profilepic_brandy_trike.jpg" style="height:35px;" /></a></div>
+                <div>Brandy Trike</div>
+                <div>Redmond, Wa</div>
+            </td>
+            <td>How old are you?</td>
+            <td>Saturday, May 10th 2015 9:00pm CST</td>
+            <td style="vertical-align:bottom;">
+                <div><a href="#" data-toggle="modal">Move To Inbox</a></div>
+                <div><a href="#msg2" data-toggle="collapse">View/Hide Msg</a></div>
+            </td>
+        </tr>
+        <tr id="msg2" class="collapse">
+            <td colspan="4">
+                Hi Brandy,<br />
+                <br />
+                I am 40 yrs old. I can send you references if you'd like.<br />
+                <br />
+                - Kathy<br />
+                <br />
+                
+                <h5 style="color:#656565;font-weight:bold;">
+                    From:Brandy Trike<br />
+                    Date: 05/10/2015 9pm CST
+                </h5>
+                
+                Hi Kathy,<br />
+                <br />
+                How old are you?<br />
+                <br />
+                Thanks,<br />
+                <br />
+                - Brandy
+            </td>
+        </tr>
+    </tbody>
+</table>

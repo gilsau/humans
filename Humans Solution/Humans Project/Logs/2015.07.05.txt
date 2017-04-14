@@ -1,0 +1,528 @@
+
+*************************************************************************************************
+2015.07.05 16:56:48 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Non-static method requires a target.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Reflection.RuntimeMethodInfo.CheckConsistency(Object target)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryGetFieldOrPropertyValue(MemberExpression me, Object instance, Object& memberValue)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryEvaluatePath(Expression expression, ConstantExpression& constantExpression)
+   at System.Data.Objects.ELinq.QueryParameterExpression.EvaluateParameter(Object[] arguments)
+   at System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 128
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.07.05 16:56:49 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Non-static method requires a target.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Reflection.RuntimeMethodInfo.CheckConsistency(Object target)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryGetFieldOrPropertyValue(MemberExpression me, Object instance, Object& memberValue)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryEvaluatePath(Expression expression, ConstantExpression& constantExpression)
+   at System.Data.Objects.ELinq.QueryParameterExpression.EvaluateParameter(Object[] arguments)
+   at System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 128
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.07.05 16:56:50 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Non-static method requires a target.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Reflection.RuntimeMethodInfo.CheckConsistency(Object target)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryGetFieldOrPropertyValue(MemberExpression me, Object instance, Object& memberValue)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryEvaluatePath(Expression expression, ConstantExpression& constantExpression)
+   at System.Data.Objects.ELinq.QueryParameterExpression.EvaluateParameter(Object[] arguments)
+   at System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 128
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.07.05 16:57:09 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: Non-static method requires a target.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Reflection.RuntimeMethodInfo.CheckConsistency(Object target)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryGetFieldOrPropertyValue(MemberExpression me, Object instance, Object& memberValue)
+   at System.Data.Objects.ELinq.QueryParameterExpression.TryEvaluatePath(Expression expression, ConstantExpression& constantExpression)
+   at System.Data.Objects.ELinq.QueryParameterExpression.EvaluateParameter(Object[] arguments)
+   at System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Data.Entity.Internal.Linq.InternalQuery`1.GetEnumerator()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.Generic.IEnumerable<TResult>.GetEnumerator()
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 128
+---------------------------------------
+SOURCE: mscorlib
+
+*************************************************************************************************
+2015.07.05 22:24:40 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:24:41 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:24:41 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:24:47 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:24:57 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:25:07 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:25:19 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:25:27 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:25:37 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:25:47 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:25:57 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:26:07 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:26:17 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:26:27 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:26:37 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:26:47 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:26:57 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:27:07 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:27:17 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:27:27 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:27:37 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:27:47 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:27:57 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework
+
+*************************************************************************************************
+2015.07.05 22:28:11 ||| ACTION:Getting All Conversations
+---------------------------------------
+MESSAGE: No connection string named 'HumansEntities' could be found in the application config file.
+---------------------------------------
+INNER EXCEPTION 
+---------------------------------------
+STACK TRACE:    at System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Humans.Web.Controllers.MessagesController.Get(String convoid) in e:\_Web Development\Equity Apps\HUMANS\Humans Solution\Humans Project\Controllers\MessagesController.cs:line 76
+---------------------------------------
+SOURCE: EntityFramework

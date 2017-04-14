@@ -1,0 +1,95 @@
+﻿@using Humans.Web
+@using Humans.Web.Helpers
+@model UserSport
+@{
+    ViewBag.Title = "";
+    
+    UserProfile acctCurrent = (UserProfile)Session["User"];
+    int currUserId = acctCurrent.UserId;
+    
+    int userDistance = (int)Math.Round(GeoCodeCalc.CalcDistance(acctCurrent.Lat, acctCurrent.Lng, Model.UserProfile.Lat, Model.UserProfile.Lng), 0) + 1;
+    
+    string secLine = string.IsNullOrEmpty(Model.UserProfile.Title) ? string.Format("{0} {1} < {2} mi.", (DateTime.Today.Subtract(Model.UserProfile.Birthdate).Days/365).ToString(), (Model.UserProfile.Gender == "M" ? "Male" : "Female"), userDistance) : string.Format("at {0} {1}mi.", Model.UserProfile.Company, 0);
+}
+
+@section scripts{
+    <script type="text/javascript" src="~/scripts/viewprofile.js"></script>
+}
+
+<!-- Header container -->
+<div class="container-fluid" style="position:relative;padding:0px;margin:0px;">
+    
+    <!-- Header background pic -->
+    <div class="row-fluid bgProfile" style="opacity:.5;
+                                            width:100%;
+                                            height:230px;
+                                            background-image:url(../profilepics/@Model.UserProfile.ProfilePic);
+                                            background-position:50% 50%;
+                                            background-size:100% 300%;
+                                            background-repeat:no-repeat;
+                                            ">
+    </div>
+
+    <!-- Header background tint -->
+    <div class="orangeoverlay" style="position:absolute;top:0px;left:0px;width:100%;height:230px;">&nbsp;</div>
+    
+    <!-- Container for Info -->
+    <div style="position:absolute;top:0px;left:0px;width:100%;height:230px;">
+        
+        <!-- Background for remember link -->
+        <div class="center-block" style="width:200px;position:relative;z-index:100;">
+
+            <!-- Title block -->
+            @{ if(!string.IsNullOrEmpty(Model.UserProfile.Title)){ 
+                    <div class="orangeback whitetext" style="padding:2px 10px 2px 10px;position:absolute;top:30px;left:-200px;font-size:18px;width:250px;text-align:left;">@Model.UserProfile.Title</div>
+                }
+            }
+
+            <!-- Remember link -->
+            @if(Model.UserProfile.UserUsers.Any(r => r.UserId == currUserId)){
+                <span data-id="@Model.UserId" class="orangeback whitetext" style="padding:2px 10px 2px 10px;position:absolute;top:50px;left:150px;font-size:18px;width:170px;text-align:right;">
+                    remembered
+                </span>
+            }
+            else{
+                <span data-id="@Model.UserId" data-location="viewprofile" class="rememberhuman btn orangeback whitetext" style="padding:2px 10px 2px 10px;position:absolute;top:50px;left:150px;font-size:18px;width:170px;text-align:right;">
+                    + remember
+                    <img class="center-block" src="../images/loading2.gif" style="height:20px;display:none;" />
+                </span>
+            }
+
+            <!-- Message icon -->
+            <span class="msg btn orangetext glyphicon glyphicon-comment" data-id="@Model.UserProfile.UserId" style="position:absolute;top:200px;left:200px;font-size:40px;"></span>
+            <span class="msg btn whitetext glyphicon glyphicon-plus" data-id="@Model.UserProfile.UserId" style="position:absolute;top:210px;left:200px;font-size:10px;font-weight:100;"></span>
+        </div>
+
+        <!-- Circle profile pic -->
+        <img src="~/profilepics/@Model.UserProfile.ProfilePic" class="center-block roundImg4" style="z-index:300;position:relative;top:10px;" />
+        
+        <!-- Name  -->
+        <div class="text-center whitetext" style="font-size:14px;font-weight:bolder;position:relative;top:20px;">@Model.UserProfile.FirstName</div>
+        
+        <!-- Age & Distance  -->
+        <div class="text-center whitetext" style="font-size:14px;font-weight:bold;position:relative;top:20px;">@secLine</div>
+    </div>
+    
+        
+</div>
+<div style="border-top:solid 2px #ff901d;">&nbsp;</div>
+<div class="text-center">
+    <h1>@Model.Sport.Longname</h1>
+    <div class="center-block text-center" style="width:90%">@Model.Note</div>
+    <div class="center-block text-center" style="width:90%">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div class="pull-right" style="width:300px;text-align:left;">
+            <h4>other interests:</h4>
+            <div class="text-right">
+                @foreach(UserSport usersport in Model.UserProfile.UserSports.Where(us => us.Id != Model.Id))
+                {
+                    <div class="orangeback" style="margin:20px;width:180px;"><a style="padding:10px;font-size:20px;" class="whitetext" href="~/account/viewprofile?id=@usersport.Id">@usersport.Sport.Longname</a></div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

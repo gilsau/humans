@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "Reset Password";
+}
+
+@{
+    if(TempData["Msg"] != null){
+        @Html.Raw(TempData["Msg"])
+    }
+}
+
+<p>Please provide your new password.</p>
+<p>&nbsp;</p>
+
+<form method="post">
+    New Password: <input type="password" name="password" /><br />
+    Confirm Password: <input type="password" name="password1" /><br />
+    <br />
+    <input type="submit" value="Reset" />
+</form>

@@ -1,0 +1,57 @@
+﻿@using Humans.Web
+@model UserProfile
+@{ 
+    string url = Request.Url.ToString().ToLower();
+    UserProfile acctCurrent = Model;
+    string sportid = Request.QueryString["sportid"] != null ? Request.QueryString["sportid"].ToString() : string.Empty;
+    string fname = string.Empty;
+    
+    if(acctCurrent != null){
+        fname = acctCurrent.FirstName != null ? acctCurrent.FirstName.ToLower() : acctCurrent.UserName.ToLower();
+    }
+    
+    bool isVenuePage = Request.Url.ToString().ToLower().IndexOf("/venues/") > -1;
+    bool isHumansPage = Request.Url.ToString().ToLower().IndexOf("/humans/") > -1;
+    bool isMsgPage = Request.Url.ToString().ToLower().IndexOf("/messages/") > -1;
+
+    string venueLink = !string.IsNullOrEmpty(sportid) ? string.Format("../venues/manage?sportid={0}", sportid) : "../sports/choose?f=venues";
+    string humanLink = !string.IsNullOrEmpty(sportid) ? string.Format("../humans/manage?sportid={0}", sportid) : "../sports/choose?f=humans";
+}
+
+<div class="navbar navbar-default navbar-fixed-top orangeback">
+    <div class="container-fluid text-center" style="position:relative;padding:0px;">
+
+        <a href="javascript:void();" class="glyphicon glyphicon-modal-window dimcolor" style="font-size:24px;text-decoration:none;"></a>
+
+        <div style="width:30px;display:inline-block;">&nbsp;</div>
+
+        <a id="mapicon" href="@venueLink" class="glyphicon glyphicon-map-marker @if(isVenuePage){<text>iconselected</text>}else{<text>dimcolor</text>}" style="font-size:24px;text-decoration:none;"></a>
+        
+        <div style="width:30px;display:inline-block;">&nbsp;</div>
+        
+        <a id="humanslink1" href="@humanLink" style="text-decoration:none;"><span style="color:#fff;font-size:36px;font-weight:bold;">human<span class="greytext">s.</span></span><span id="humanicon1"></span></a>
+        <a id="humanslink2" href="@humanLink" class="glyphicon glyphicon-user @if(isHumansPage){<text>iconselected</text>}else{<text>dimcolor</text>}" style="font-size:24px;text-decoration:none;"><span id="humanicon2"></span></a>
+        
+        <div style="width:30px;display:inline-block;">&nbsp;</div>
+        
+        <a href="~/messages/manage" id="msgicon" class="glyphicon glyphicon-comment @if(isMsgPage){<text>iconselected</text>}else{<text>dimcolor</text>}" style="font-size:24px;text-decoration:none;"></a>
+
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse navHeaderCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a style="color:#fff;font-size:18px;" href="@Url.Content("~/account/myprofile")">@fname</a></li>
+                <li><a href="#" style="color:#fff;font-size:18px;" id="btnLogoff"><span class="glyphicon glyphicon-log-out"></span></a></li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<form id="frmLogoff" method="post" action="~/account/logoff">
+    @Html.AntiForgeryToken()
+</form>

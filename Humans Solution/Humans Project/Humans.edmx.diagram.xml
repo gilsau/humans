@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="46aaea37db41439fb0c380d7e8343736" Name="Diagram1">
+        <EntityTypeShape EntityType="HumansModel.NotificationType" Width="1.5" PointX="6" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.Sport" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.SportCategory" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.State" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.Status" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.UserMessage" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.UserNotification" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.UserProfile" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.UserSport" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.UserUser" Width="1.5" PointX="5.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.UserVenue" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.Venue" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.VenueSport" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.webpages_Membership" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.webpages_OAuthMembership" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.webpages_Roles" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumansModel.webpages_UsersInRoles" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="HumansModel.fk_UserNotifications_NotificationType" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_Sport_SportCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserSports_Sport" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_VenueSports_Sport" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserProfile_State" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserProfile_State_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_Venue_State" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserMessages_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserNotifications_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserMessages_From" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserMessages_To" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserNotifications_User" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserSports_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserUsers_Remembered" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserUsers_User" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserVenues_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_UserVenues_Venue" ManuallyRouted="false" />
+        <AssociationConnector Association="HumansModel.fk_VenueSports_Venue" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

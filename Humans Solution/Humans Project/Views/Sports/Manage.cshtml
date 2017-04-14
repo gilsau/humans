@@ -1,0 +1,42 @@
+﻿@using Humans.Web
+@{
+    ViewBag.Title = "Manage";
+    UserProfile acctCurrent = (UserProfile)Session["User"];
+}
+
+@section scripts{
+    <script type="text/javascript" src="~/scripts/sports_manage.js"></script>
+}
+
+<br />
+<div class="orangetext text-center" style="font-size:22px;">
+    let's introduce you to local <b class="orangetext">riders</b>, <b class="orangetext">riding spots</b>, & <span class="orangetext">more</span>.
+</div>
+<br />
+<div class="orangetext text-center" style="font-size:22px;">
+    what do you ride?
+</div>
+<br />
+<div class="darkgreytext text-center" style="font-size:22px;font-weight:bold;padding:10px;">click your favorites</div>
+<div style="font-size:18px;" class="text-center">
+    @foreach(SportCategory cat in ViewBag.SportCats)
+    {
+        <b class="darkgreytext">@cat.Name</b><br />
+        <span class="sportslist">
+            @foreach (Sport sport in ((IList<Sport>)ViewBag.Sports).Where(s => s.SportCategoryId == cat.Id))
+            {
+                <span data-id="@sport.Id" @if(acctCurrent.UserSports.Any(s2=>s2.SportId == sport.Id)){<text>class="sportslistselected" style="color:#fff;"</text>}>@sport.Name.&nbsp;</span>
+            }
+        </span>
+        <hr />
+    }
+</div>
+
+<br />
+<br />
+<div class="done darkgreytext text-center center-block" style="font-size:34px;width:150px;margin-bottom:50px;">
+    <b class="btn button1">finish.</b>
+    <img src="~/images/loading_animated.gif" style="height:30px;display:none;" />
+    <span class="ok glyphicon glyphicon-ok-sign" style="display:none;"></span>
+    <span class="err glyphicon glyphicon-exclamation-sign" style="display:none;"></span>
+</div>

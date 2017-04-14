@@ -1,0 +1,17 @@
+﻿@using Humans.Web
+@{
+    ViewBag.Title = "Choose";
+
+    UserProfile acctCurrent = (UserProfile)Session["User"];
+}
+
+<br /><br /><br />
+<div class="text-center greytext">
+    <h3>choose your sport</h3>
+    <div class="leftmenulist" style="border-right:solid 2px #ff901d;font-size:24px;">
+        @foreach (UserSport usersport in acctCurrent.UserSports)
+        {
+            <div><a href="~/@Request.QueryString["f"]/manage?sportid=@usersport.SportId">@usersport.Sport.Longname</a></div>
+        }
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿@using Humans.Web
+@{ UserProfile acctCurrent = (UserProfile)Session["User"]; }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>humans - @ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Css/jquery-ui.min.css")
+        @Styles.Render("~/Css/bootstrap.min.css")
+        @Styles.Render("~/Css/main.css")
+        @RenderSection("stylesheets", required: false)
+    </head>
+    <body>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=667708286661950";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <header style="margin:0px;padding:0px;">
+            @Html.Partial("Header", acctCurrent)
+        </header>
+        <div class="container-fluid" style="padding:0px;margin:0px;background-color:#fff;">
+            <div style="padding:0px;margin:0px;">
+                <section id="leftPanel" class="col-sm-2 jumbotron" style="padding:0px;margin:0px;">@Html.Partial("LeftPanel", acctCurrent)</section>
+                <section id="mainBody" class="col-sm-10" style="padding:0px;margin:0px;">@RenderBody()</section>
+            </div>
+        </div>
+        <footer>
+            @Html.Partial("Footer")
+        </footer>
+
+        @Scripts.Render("~/scripts/jquery-2.1.3.min.js")
+        @Scripts.Render("~/scripts/jquery-ui.min.js")
+        @Scripts.Render("~/scripts/bootstrap.min.js")
+        @Scripts.Render("~/scripts/global.js")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

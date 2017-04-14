@@ -1,0 +1,59 @@
+﻿@model Humans.Web.Models.RegisterModel
+@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "Register";
+}
+
+@if (TempData["Msg"] != null)
+{
+    <div class="alert alert-default text-center"><h2>@TempData["Msg"]</h2></div>
+}
+
+<div style="height:50px;">&nbsp;</div>
+<div class="panel panel-default" style="width:400px;height:350px;margin:auto;padding:0px;">
+    <div class="panel-heading">
+        <span>@Html.ActionLink("Log In", "Login")</span>
+        <span class="pull-right">@Html.ActionLink("Sign Up!", "Register")</span>
+    </div>
+    <div class="panel-body">
+        <section id="loginForm">
+           @using (Html.BeginForm()) {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary()
+
+                <fieldset>
+                    <legend style="border:none;"></legend>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">@Html.LabelFor(m => m.FirstName)</span>
+                        @Html.TextBoxFor(m => m.FirstName, new {@class="form-control"})
+                    </div>
+                    
+                    <div class="input-group">
+                        <span class="input-group-addon">@Html.LabelFor(m => m.UserName)</span>
+                        @Html.TextBoxFor(m => m.UserName, new {@class="form-control"})
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">@Html.LabelFor(m => m.Birthdate)</span>
+                        @Html.TextBoxFor(m => m.Birthdate, new {@class="form-control"})
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">@Html.LabelFor(m => m.Gender)</span>
+                        @Html.RadioButtonFor(m => m.Gender, "M") Male
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.RadioButtonFor(m => m.Gender, "F") Female
+                    </div>
+
+                    <br />
+        
+                    <input type="submit" value="Register" />
+                </fieldset>
+            }
+                
+            <div style="height:300px;">&nbsp;</div>
+        </section>
+    </div>
+</div>
+<div style="height:350px;">&nbsp;</div>

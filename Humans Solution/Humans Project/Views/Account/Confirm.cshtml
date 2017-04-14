@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "Confirm Registration";
+}
+
+<div style="height:50px;">&nbsp;</div>
+@{
+    if(TempData["Msg"] != null){
+        
+        <div class="alert alert-default text-center center-block" style="width:80%;">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <h2>@Html.Raw(TempData["Msg"])</h2>
+        </div>
+        
+    }
+}
+<div style="height:500px;">&nbsp;</div>
